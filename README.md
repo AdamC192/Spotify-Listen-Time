@@ -29,9 +29,9 @@ Add a file to the program:
 ![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/fd3a9621-e4c1-4664-814d-1037ea1f37ce)
 
  3. Copy the directory of on of the files and open the python script 'main.py'.
- 4. Enter the directory of the file into the termial of the running python script (make sure to double slash any backslashes),
+ 4. Enter the directory of the file into the termial of the running python script (make sure to double slash any backslashes and that there are no quotation marks included in the directory),
 
-![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/e65de004-6d00-4f06-8ce3-ec87bb8c8503)
+![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/50c62666-6e66-491d-966b-2a75c33e75b4)
 
  5. Press enter to add the file the program, once complete it should show your total listening time,
 
