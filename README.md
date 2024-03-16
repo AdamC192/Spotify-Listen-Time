@@ -5,7 +5,6 @@
 - View total listening hours based on provided .JSON data files.
 - Sum the total listening hours from multiple .JSON data files. 
 
-
 **INSTRUCTIONS & USE CASES**
 
 Requesting streaming history from spotify:
@@ -37,3 +36,5 @@ Add a file to the program:
  5. Press enter to add the file the program, once complete it should show your total listening time,
 
 ![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/75803cc2-7260-4eee-a32c-f8a7292c8f23)
+
+ 6. From this point you can type 'RESET' in the terminal to reset the program and the current total listen time, or you can type in the directory of another file to add to your total listen time.
