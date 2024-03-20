@@ -1,7 +1,7 @@
 # SPOTIFY-LISTEN-TIME
  View your spotify listening stats with this simple program from the termial
 
-**FEATURES (V1.0)**
+**FEATURES (V2.0)**
 - View total listening hours based on provided .JSON data files.
 - Sum the total listening hours from multiple .JSON data files. 
 
@@ -23,18 +23,23 @@ Requesting streaming history from spotify:
 
 
 Add a file to the program:
- 1. Once the file has downloaded, extract the .ZIP folder in an accessible location (such as the desktop or documents folders).
- 2. Open the folder and locate a folder named 'StreamingHistory_music_[NUMBER].json' (there may be multiple files)
+ 1. Download your spotify listening data from the email you received and extract the file to your preferred directory.
+ 2. Download this project as a ZIP file, once installed extract the project then extract the "SpoTimerExecutable.zip" file to the directory you want to store the application at.
+ 3. Launch the application.
 
-![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/fd3a9621-e4c1-4664-814d-1037ea1f37ce)
+![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/bbad339e-d1c1-4085-8ed3-d3d52c092ebe)
 
- 3. Copy the directory of on of the files and open the python script 'main.py'.
- 4. Enter the directory of the file into the termial of the running python script (make sure to double slash any backslashes and that there are no quotation marks included in the directory),
 
-![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/50c62666-6e66-491d-966b-2a75c33e75b4)
+ 3. Once the applicaton has opened, click the "ADD FILE" button, in file explorer find the "StreamingHistory" files and select file,
 
- 5. Press enter to add the file the program, once complete it should show your total listening time,
+![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/8af65e75-e2d8-4f6e-bbff-3f7cc201467a)
 
-![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/75803cc2-7260-4eee-a32c-f8a7292c8f23)
 
- 6. From this point you can type 'RESET' in the terminal to reset the program and the current total listen time, or you can type in the directory of another file to add to your total listen time.
+ 4. Add as much files as you want, and once finished press the "CALCULATE TOTAL" button, your total listen hours should show (values in the terminal behind the application are the individual hours for each file provided),
+
+![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/e315b320-1b80-4d22-bafc-b340703434bf)
+
+
+ 6. From this point you can add more files using the "ADD FILE" button, recalculate the total, or press "RESET" to reset the program.
+
+All code involved in the application is contained in the "SpoTimer.py", feel free to take what you want.
