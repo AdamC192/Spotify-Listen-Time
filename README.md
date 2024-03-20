@@ -1,5 +1,5 @@
 # SPOTIFY-LISTEN-TIME
- View your spotify listening stats with this simple program from the termial
+ View your spotify listening stats with this simple application
 
 **FEATURES (V2.0)**
 - View total listening hours based on provided .JSON data files.
