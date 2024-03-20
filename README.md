@@ -38,9 +38,9 @@ Add a file to the program:
 
  4. Add as much files as you want, and once finished press the "CALCULATE TOTAL" button, your total listen hours should show (values in the terminal behind the application are the individual hours for each file provided),
 
-![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/e315b320-1b80-4d22-bafc-b340703434bf)
+![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/080d12b0-7ce6-431f-b8e7-1a1c6b6c246c)
 
 
- 6. From this point you can add more files using the "ADD FILE" button, recalculate the total, or press "RESET" to reset the program.
+ 5. From this point you can add more files using the "ADD FILE" button, recalculate the total, or press "RESET" to reset the program.
 
 All code involved in the application is contained in the "SpoTimer.py", feel free to take what you want.
