@@ -2,7 +2,6 @@ import tkinter as tk
 import json
 import math
 from tkinter.filedialog import askopenfilename
-from tkinter.filedialog import askdirectory
 from tkinter import font
 
 
