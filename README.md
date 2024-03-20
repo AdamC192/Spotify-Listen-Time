@@ -23,7 +23,7 @@ Requesting streaming history from spotify:
 
 
 
-Add a file to the program:
+Add a file to the program (You can run the "SpoTimer.py" in VSCode instead of installing the .exe if you want):
  1. Download your spotify listening data from the email you received and extract the file to your preferred directory.
  2. Download this project as a ZIP file, once installed extract the project then extract the "SpoTimerExecutable.zip" file to the directory you want to store the application at.
  3. Launch the application.
