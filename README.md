@@ -22,6 +22,7 @@ Requesting streaming history from spotify:
 ![image](https://github.com/AdamC192/Spotify-Listen-Time/assets/112624338/74c4dcf6-8e77-4ffc-8520-60f95b214399)
 
 
+
 Add a file to the program:
  1. Download your spotify listening data from the email you received and extract the file to your preferred directory.
  2. Download this project as a ZIP file, once installed extract the project then extract the "SpoTimerExecutable.zip" file to the directory you want to store the application at.
