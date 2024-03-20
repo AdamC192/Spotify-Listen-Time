@@ -23,39 +23,61 @@ def GetFile():
         
         # Update the label with the joined list of file paths
         uploadedfiles_label.config(text="\n".join(file_paths))
-        
+
 # Calculate the result
 def CalculateResult():
+    total_ms = 0
+
     # Iterate through each provided file and read the content
     if file_paths:
         for i in file_paths:
-            # Open the JSON file
-            with open(i, encoding="utf-8") as json_file:
-                # Returns the JSON object as a list of dictionaries
-                data = json.load(json_file)
+            try:
+                # Open the JSON file
+                with open(i, encoding="utf-8") as json_file:
+                    # Returns the JSON object as a list of dictionaries
+                    data = json.load(json_file)
 
-                # Extracting 'msPlayed' value from each section
-                total_ms = sum(entry.get("msPlayed", 0) for entry in data)
+                    # Extracting 'msPlayed' value from each section
+                    ms = sum(entry.get("msPlayed", 0) for entry in data)
+                
+                total_ms += math.ceil(ms / 3.6e+6 * 100) / 100
+                print(math.ceil(ms / 3.6e+6 * 100) / 100)
+
+            except FileNotFoundError:
+                print(f"Error: File '{i}' not found.")
+                DisplayResult(-2)
+            except json.JSONDecodeError:
+                print(f"Error: File '{i}' is not a valid JSON file.")
+                DisplayResult(-1)
+            except Exception as e:
+                print(f"An error occurred while processing file '{i}': {e}")
+                DisplayResult(0)
         
-        total_ms = math.ceil(total_ms / 60000) / 100
         DisplayResult(total_ms)
 
 def DisplayResult(total_ms):
-    result_label.config(text=f"Total Minutes Played: {total_ms}")       
+    if total_ms > 0:
+        result_label.config(text=f"Total Hours Played: {total_ms}")       
+    elif total_ms == 0:
+        result_label.config(text="Invalid file provided")
+    elif total_ms == -1:
+        result_label.config(text="Provided file not a valid JSON")
+    elif total_ms == -2:
+        result_label.config(text="Provided file not found")
 
 # Reset the program by clearing all variables and values
 def ResetProgram():
-    for i in file_paths:
-        file_paths[i].remove
+    global file_paths
+    file_paths = []
     result_total_ms = 0
-    uploadedfiles_label.config(text=file_paths)
-    result_label.config(text="Total Minutes Played: -")
+    uploadedfiles_label.config(text="No files uploaded")
+    result_label.config(text="Total Hours Played: -")
 
 
 # Define tkinter and the program details
 root = tk.Tk()
 root.title('Spotify Listen Time')
-root.geometry("400x650")
+root.geometry("450x600")
 # root.config(bg="") page background
 
 # Interface elements
@@ -71,7 +93,7 @@ uploadedfiles_label = tk.Label(root, text="No files uploaded", justify=tk.CENTER
 calculate_label = tk.Label(root, text="-- Calculate the total listen result --")
 calculate_button = tk.Button(text="CALCULATE TOTAL", width=25, command=CalculateResult)
 
-result_label = tk.Label(root, text="Total Minutes Played: -")
+result_label = tk.Label(root, text="Total Hours Played: -")
 
 restart_button = tk.Button(text="RESET", width=25, command=ResetProgram)
 
