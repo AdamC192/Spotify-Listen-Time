@@ -80,6 +80,7 @@ root.title('Spotify Listen Time')
 root.geometry("450x600")
 # root.config(bg="") page background
 
+
 # Interface elements
 header1_font = font.Font(family="Helvetica", size=14, weight="bold")
 
